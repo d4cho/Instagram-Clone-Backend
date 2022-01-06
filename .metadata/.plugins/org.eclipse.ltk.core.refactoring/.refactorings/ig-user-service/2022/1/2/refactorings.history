@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;User.java&apos; to &apos;io.daniel.models.Post.java&apos;&#x0A;- Original project: &apos;ig-user-service&apos;&#x0A;- Destination element: &apos;io.daniel.models.Post.java&apos;&#x0A;- Original element: &apos;io.daniel.models.User.java&apos;" description="Copy compilation unit" destination="=ig-post-service/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;io.daniel.models{Post.java" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;io.daniel.models{User.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1641486732044" units="1" version="1.0"/>
+</session>

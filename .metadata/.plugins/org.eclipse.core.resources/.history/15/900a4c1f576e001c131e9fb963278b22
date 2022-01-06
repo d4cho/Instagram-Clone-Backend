@@ -1,0 +1,11 @@
+package io.daniel.models;
+
+public class Post {
+	
+	private int postId;
+	private int userId;
+	private int likes;
+	private String image;
+	private String desc;
+
+}

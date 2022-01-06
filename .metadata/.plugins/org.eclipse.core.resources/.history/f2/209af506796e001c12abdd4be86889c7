@@ -1,0 +1,72 @@
+package io.daniel.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Post {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int postId;
+	private int userId;
+	private int likeCount;
+	private String image;
+	private String postdesc;
+
+	public Post() {
+
+	}
+
+	public Post(int postId, int userId, int likeCount, String image, String postdesc) {
+		super();
+		this.postId = postId;
+		this.userId = userId;
+		this.likeCount = likeCount;
+		this.image = image;
+		this.postdesc = postdesc;
+	}
+
+	public int getPostId() {
+		return postId;
+	}
+
+	public void setPostId(int postId) {
+		this.postId = postId;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public int getLikeCount() {
+		return likeCount;
+	}
+
+	public void setLikeCount(int likeCount) {
+		this.likeCount = likeCount;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public String getPostDesc() {
+		return postdesc;
+	}
+
+	public void setPostDesc(String postdesc) {
+		this.postdesc = postdesc;
+	}
+
+}

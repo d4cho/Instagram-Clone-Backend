@@ -1,0 +1,13 @@
+package io.daniel;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class IgUserServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(IgUserServiceApplication.class, args);
+	}
+
+}

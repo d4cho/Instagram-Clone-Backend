@@ -1,0 +1,32 @@
+package io.daniel.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import io.daniel.models.User;
+import io.daniel.repository.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+
+	public User addUser(User user) {
+		userRepository.save(user);
+		return user;
+	}
+
+	public User editUser(User user) {
+		userRepository.save(user);
+		return user;
+	}
+
+	public User getUserByUserName(String userName) {
+		return userRepository.findByUserName(userName);
+
+	}
+	
+	
+
+}
