@@ -33,21 +33,11 @@ public class PostService {
 	}
 
 	public Post addPost(Post post) {
-		postRepository.save(post);
-		return post;
+		return postRepository.save(post);
 	}
 
-	public Post editPost(Integer postId, Post post) {
-		Integer _postId = post.getUserId();
-
-		if (postId == _postId) {
-			return postRepository.save(post);
-		} else if (_postId == null) {
-			post.setPostId(postId);
-			return postRepository.save(post);
-		} else {
-			return null;
-		}
+	public Post editPost(Post post) {
+		return postRepository.save(post);
 	}
 
 	public Post getPostByPostId(Integer postId) {

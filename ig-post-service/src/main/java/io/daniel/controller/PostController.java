@@ -96,8 +96,8 @@ public class PostController {
 	}
 
 	@PutMapping("/{postId}")
-	public Post editPost(@PathVariable("postId") Integer postId, @RequestBody Post post) {
-		return postService.editPost(postId, post);
+	public Post editPost(@RequestBody Post post) {
+		return postService.editPost(post);
 	}
 
 }

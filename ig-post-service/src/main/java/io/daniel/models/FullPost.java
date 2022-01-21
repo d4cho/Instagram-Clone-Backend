@@ -8,7 +8,7 @@ public class FullPost {
 	private Integer userId;
 	private Integer likeCount;
 	private String image;
-	private String postdesc;
+	private String postDesc;
 
 	private String userName;
 	private String profileImage;
@@ -19,14 +19,14 @@ public class FullPost {
 
 	}
 
-	public FullPost(Integer postId, Integer userId, Integer likeCount, String image, String postdesc, String userName,
+	public FullPost(Integer postId, Integer userId, Integer likeCount, String image, String postDesc, String userName,
 			String profileImage, FullComments fullComments) {
 		super();
 		this.postId = postId;
 		this.userId = userId;
 		this.likeCount = likeCount;
 		this.image = image;
-		this.postdesc = postdesc;
+		this.postDesc = postDesc;
 		this.userName = userName;
 		this.profileImage = profileImage;
 		this.fullComments = fullComments.getFullComments();
@@ -64,12 +64,12 @@ public class FullPost {
 		this.image = image;
 	}
 
-	public String getPostdesc() {
-		return postdesc;
+	public String getPostDesc() {
+		return postDesc;
 	}
 
-	public void setPostdesc(String postdesc) {
-		this.postdesc = postdesc;
+	public void getPostDesc(String postDesc) {
+		this.postDesc = postDesc;
 	}
 
 	public String getUserName() {

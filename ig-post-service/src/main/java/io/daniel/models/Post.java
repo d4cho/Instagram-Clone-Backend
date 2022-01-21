@@ -14,19 +14,19 @@ public class Post {
 	private Integer userId;
 	private Integer likeCount;
 	private String image;
-	private String postdesc;
+	private String postDesc;
 
 	public Post() {
 
 	}
 
-	public Post(Integer postId, Integer userId, Integer likeCount, String image, String postdesc) {
+	public Post(Integer postId, Integer userId, Integer likeCount, String image, String postDesc) {
 		super();
 		this.postId = postId;
 		this.userId = userId;
 		this.likeCount = likeCount;
 		this.image = image;
-		this.postdesc = postdesc;
+		this.postDesc = postDesc;
 	}
 
 	public Integer getPostId() {
@@ -62,11 +62,11 @@ public class Post {
 	}
 
 	public String getPostDesc() {
-		return postdesc;
+		return postDesc;
 	}
 
-	public void setPostDesc(String postdesc) {
-		this.postdesc = postdesc;
+	public void setPostDesc(String postDesc) {
+		this.postDesc = postDesc;
 	}
 
 }

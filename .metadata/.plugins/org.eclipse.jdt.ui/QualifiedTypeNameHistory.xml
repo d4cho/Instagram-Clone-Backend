@@ -2,14 +2,23 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-    <fullyQualifiedTypeName name="io.daniel.models.User"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="antlr.collections.List"/>
     <fullyQualifiedTypeName name="io.daniel.models.Users"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="org.springframework.web.reactive.function.client.WebClient"/>
+    <fullyQualifiedTypeName name="org.springframework.web.reactive.function.client.WebClient.Builder"/>
+    <fullyQualifiedTypeName name="io.daniel.models.User"/>
+    <fullyQualifiedTypeName name="io.daniel.models.FullPosts"/>
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="io.daniel.repository.CommentRepository"/>
+    <fullyQualifiedTypeName name="io.daniel.models.Comments"/>
+    <fullyQualifiedTypeName name="io.daniel.models.Comment"/>
+    <fullyQualifiedTypeName name="io.daniel.models.FullComment"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="io.daniel.models.FullComments"/>
     <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
