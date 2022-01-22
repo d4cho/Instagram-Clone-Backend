@@ -24,7 +24,7 @@ public class PostService {
 		return _posts;
 	}
 
-	public Posts getAllPostsByUserId(Integer userId) {
+	public Posts getAllPostsByUserId(String userId) {
 		List<Post> posts = new ArrayList<>();
 		postRepository.findAllByUserId(userId).forEach(post -> posts.add(post));
 

@@ -30,25 +30,26 @@ public class UserService {
 		return new Users(users);
 	}
 
-	public User getUserById(Integer userId) {
-		return userRepository.findById(userId).get();
+	public User getUserById(String userId) {
+		return userRepository.findByUserId(userId);
 	}
 
 	public User addUser(User user) {
 		return userRepository.save(user);
 	}
 
-	public User editUser(Integer userId, User user) {
-		Integer _userId = user.getUserId();
-
-		if (userId == _userId) {
-			return userRepository.save(user);
-		} else if (_userId == null) {
-			user.setUserId(userId);
-			return userRepository.save(user);
-		} else {
-			return null;
-		}
+	public User editUser(String userId, User user) {
+		return userRepository.save(user);
+//		String _userId = user.getUserId();
+//
+//		if (userId == _userId) {
+//			return userRepository.save(user);
+//		} else if (_userId == null) {
+//			user.setUserId(userId);
+//			return userRepository.save(user);
+//		} else {
+//			return null;
+//		}
 	}
 
 }

@@ -11,7 +11,7 @@ public class Comment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer commentId;
-	private Integer userId;
+	private String userId;
 	private Integer postId;
 	private String commentText;
 	private Integer likeCount;
@@ -20,7 +20,7 @@ public class Comment {
 
 	}
 
-	public Comment(Integer commentId, Integer userId, Integer postId, String commentText, Integer likeCount) {
+	public Comment(Integer commentId, String userId, Integer postId, String commentText, Integer likeCount) {
 		super();
 		this.commentId = commentId;
 		this.userId = userId;
@@ -45,11 +45,11 @@ public class Comment {
 		this.commentId = commentId;
 	}
 
-	public Integer getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 

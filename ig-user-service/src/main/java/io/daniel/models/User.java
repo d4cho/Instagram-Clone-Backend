@@ -1,16 +1,16 @@
 package io.daniel.models;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer userId;
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String userId;
 	private String userName;
 	private String name;
 	private String image;
@@ -19,7 +19,7 @@ public class User {
 
 	}
 
-	public User(Integer userId, String userName, String name, String image) {
+	public User(String userId, String userName, String name, String image) {
 		super();
 		this.userId = userId;
 		this.userName = userName;
@@ -27,11 +27,11 @@ public class User {
 		this.image = image;
 	}
 
-	public Integer getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 

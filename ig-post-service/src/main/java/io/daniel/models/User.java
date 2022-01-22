@@ -2,7 +2,7 @@ package io.daniel.models;
 
 public class User {
 
-	private Integer userId;
+	private String userId;
 	private String userName;
 	private String name;
 	private String image;
@@ -11,7 +11,7 @@ public class User {
 
 	}
 
-	public User(Integer userId, String userName, String name, String image) {
+	public User(String userId, String userName, String name, String image) {
 		super();
 		this.userId = userId;
 		this.userName = userName;
@@ -19,11 +19,11 @@ public class User {
 		this.image = image;
 	}
 
-	public Integer getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 

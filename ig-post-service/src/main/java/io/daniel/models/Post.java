@@ -11,7 +11,7 @@ public class Post {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer postId;
-	private Integer userId;
+	private String userId;
 	private Integer likeCount;
 	private String image;
 	private String postDesc;
@@ -20,7 +20,7 @@ public class Post {
 
 	}
 
-	public Post(Integer postId, Integer userId, Integer likeCount, String image, String postDesc) {
+	public Post(Integer postId, String userId, Integer likeCount, String image, String postDesc) {
 		super();
 		this.postId = postId;
 		this.userId = userId;
@@ -37,11 +37,11 @@ public class Post {
 		this.postId = postId;
 	}
 
-	public Integer getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 

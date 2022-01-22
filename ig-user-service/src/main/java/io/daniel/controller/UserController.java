@@ -32,7 +32,7 @@ public class UserController {
 	}
 
 	@GetMapping("/{userId}")
-	public User getUserById(@PathVariable("userId") Integer userId) {
+	public User getUserById(@PathVariable("userId") String userId) {
 		return userService.getUserById(userId);
 	}
 
@@ -42,7 +42,7 @@ public class UserController {
 	}
 
 	@PutMapping("/{userId}")
-	public User editUser(@PathVariable("userId") Integer userId, @RequestBody User user) {
+	public User editUser(@PathVariable("userId") String userId, @RequestBody User user) {
 		return userService.editUser(userId, user);
 	}
 

@@ -6,8 +6,10 @@ import org.springframework.stereotype.Repository;
 import io.daniel.models.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UserRepository extends JpaRepository<User, String> {
 	
 	User findByUserName(String userName);
+
+	User findByUserId(String userId);
 
 }

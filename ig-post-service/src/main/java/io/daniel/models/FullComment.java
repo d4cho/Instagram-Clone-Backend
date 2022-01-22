@@ -3,7 +3,7 @@ package io.daniel.models;
 public class FullComment {
 
 	private Integer commentId;
-	private Integer userId;
+	private String userId;
 	private Integer postId;
 	private String commentText;
 	private Integer likeCount;
@@ -15,7 +15,7 @@ public class FullComment {
 
 	}
 
-	public FullComment(Integer commentId, Integer userId, Integer postId, String commentText, Integer likeCount,
+	public FullComment(Integer commentId, String userId, Integer postId, String commentText, Integer likeCount,
 			String userName, String profileImage) {
 		super();
 		this.commentId = commentId;
@@ -35,11 +35,11 @@ public class FullComment {
 		this.commentId = commentId;
 	}
 
-	public Integer getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 

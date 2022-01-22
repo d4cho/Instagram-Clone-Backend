@@ -10,6 +10,6 @@ import io.daniel.models.Post;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Integer> {
 
-	List<Post> findAllByUserId(Integer userId);
+	List<Post> findAllByUserId(String userId);
 	
 }

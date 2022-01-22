@@ -5,7 +5,7 @@ import java.util.List;
 public class FullPost {
 
 	private Integer postId;
-	private Integer userId;
+	private String userId;
 	private Integer likeCount;
 	private String image;
 	private String postDesc;
@@ -19,7 +19,7 @@ public class FullPost {
 
 	}
 
-	public FullPost(Integer postId, Integer userId, Integer likeCount, String image, String postDesc, String userName,
+	public FullPost(Integer postId, String userId, Integer likeCount, String image, String postDesc, String userName,
 			String profileImage, FullComments fullComments) {
 		super();
 		this.postId = postId;
@@ -40,11 +40,11 @@ public class FullPost {
 		this.postId = postId;
 	}
 
-	public Integer getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 
