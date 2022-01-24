@@ -17,13 +17,13 @@ import io.daniel.service.UserService;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UserController {
 
 	@Autowired
 	private UserService userService;
 
-	@GetMapping
+	@GetMapping("/private")
 	public Users getUsers(@RequestParam(value = "userName", required = false) String userName) {
 		if (userName != null) {
 			return userService.getUserByUserName(userName);
@@ -31,17 +31,17 @@ public class UserController {
 		return userService.getAllUsers();
 	}
 
-	@GetMapping("/{userId}")
+	@GetMapping("/private/{userId}")
 	public User getUserById(@PathVariable("userId") String userId) {
 		return userService.getUserById(userId);
 	}
 
-	@PostMapping
+	@PostMapping("/public/add")
 	public User addUser(@RequestBody User user) {
 		return userService.addUser(user);
 	}
 
-	@PutMapping("/{userId}")
+	@PutMapping("/private/edit/{userId}")
 	public User editUser(@PathVariable("userId") String userId, @RequestBody User user) {
 		return userService.editUser(userId, user);
 	}
