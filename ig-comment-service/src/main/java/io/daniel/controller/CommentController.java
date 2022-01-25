@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.oauth2.server.resource.web.reactive.function.client.ServletBearerExchangeFilterFunction;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,7 +24,7 @@ import io.daniel.service.CommentService;
 
 @RestController
 @RequestMapping("/comments")
-@CrossOrigin
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CommentController {
 
 	@Autowired
@@ -38,9 +39,11 @@ public class CommentController {
 				
 		List<FullComment> _fullComments = comments.getComments().stream().map(comment -> {
 			
-			User user = webClientBuilder.build()
+			User user = webClientBuilder
+					.filter(new ServletBearerExchangeFilterFunction())	// to propagate Authorization token in header
+					.build()
 					.get()
-					.uri("http://ig-user-service/users/" + comment.getUserId())
+					.uri("http://ig-user-service/users/private/" + comment.getUserId())
 					.retrieve()
 					.bodyToMono(User.class)
 					.block();
