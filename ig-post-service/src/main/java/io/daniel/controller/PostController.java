@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.oauth2.server.resource.web.reactive.function.client.ServletBearerExchangeFilterFunction;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,14 +41,18 @@ public class PostController {
 
 		List<FullPost> _fullPosts = posts.getPosts().stream().map(post -> {
 
-			User user = webClientBuilder.build()
+			User user = webClientBuilder
+					.filter(new ServletBearerExchangeFilterFunction())	// to propagate Authorization token in header
+					.build()
 					.get()
-					.uri("http://ig-user-service/users/" + post.getUserId())
+					.uri("http://ig-user-service/users/private/" + post.getUserId())
 					.retrieve()
 					.bodyToMono(User.class)
 					.block();
 			
-			FullComments fullComments = webClientBuilder.build()
+			FullComments fullComments = webClientBuilder
+					.filter(new ServletBearerExchangeFilterFunction())	// to propagate Authorization token in header
+					.build()
 					.get()
 					.uri("http://ig-comment-service/comments/" + post.getPostId())
 					.retrieve()
@@ -67,14 +72,18 @@ public class PostController {
 		
 		Post post = postService.getPostByPostId(postId);
 
-		User user = webClientBuilder.build()
+		User user = webClientBuilder
+				.filter(new ServletBearerExchangeFilterFunction())	// to propagate Authorization token in header
+				.build()
 				.get()
-				.uri("http://ig-user-service/users/" + post.getUserId())
+				.uri("http://ig-user-service/users/private/" + post.getUserId())
 				.retrieve()
 				.bodyToMono(User.class)
 				.block();
 		
-		FullComments fullComments = webClientBuilder.build()
+		FullComments fullComments = webClientBuilder
+				.filter(new ServletBearerExchangeFilterFunction())	// to propagate Authorization token in header
+				.build()
 				.get()
 				.uri("http://ig-comment-service/comments/" + post.getPostId())
 				.retrieve()
